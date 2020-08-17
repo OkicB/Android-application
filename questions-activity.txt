@@ -1,0 +1,117 @@
+package com.example.bekirapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class Questions extends AppCompatActivity {
+    Button button;
+    TextView textView;
+    CheckBox checkBox, checkBox2, checkBox3, checkBox4, checkBox5;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_questions);
+        button=findViewById(R.id.button12);
+        textView=findViewById(R.id.textView);
+        checkBox=findViewById(R.id.checkBox);
+        checkBox2=findViewById(R.id.checkBox2);
+        checkBox3=findViewById(R.id.checkBox3);
+        checkBox4=findViewById(R.id.checkBox4);
+        checkBox5=findViewById(R.id.checkBox5);
+    }
+
+    //prvi button
+    public void pitanjeJedan() {
+        textView.setText("Šta sadrži objekat kao struktura u OOP");
+
+        checkBox.setText("1. Funkcije");
+        checkBox2.setText("2. Klase");
+        checkBox3.setText("3. Metode");
+        checkBox4.setText("4. Strukture");
+        checkBox5.setText("5. Atribute");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkBox3.isChecked() && checkBox5.isChecked()) {
+                    Toast.makeText(Questions.this, "Tačan odgovor", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Questions.this, "Netačan odgovor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    //treci button
+    public void pitanjeTri() {
+        textView.setText("Ključne riječi za kodiranje predznaka");
+
+        checkBox.setText("1. const");
+        checkBox2.setText("2. signed");
+        checkBox3.setText("3. push");
+        checkBox4.setText("4. unsigned");
+        checkBox5.setText("5. front");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkBox2.isChecked() && checkBox4.isChecked()) {
+                    Toast.makeText(Questions.this, "Tačan odgovor", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Questions.this, "Netačan odgovor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    //sesti button
+    public void pitanjeSest() {
+        textView.setText("Kako se varijabla u lambdi može dobiti");
+
+        checkBox.setText("1. po vrijednosti");
+        checkBox2.setText("2. kombinovano");
+        checkBox3.setText("3. po konstanti");
+        checkBox4.setText("4. po pokazivacu");
+        checkBox5.setText("5. po referenci");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkBox.isChecked() && checkBox2.isChecked() && checkBox5.isChecked()) {
+                    Toast.makeText(Questions.this, "Tačan odgovor", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Questions.this, "Netačan odgovor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    // osmi button
+    public void pitanjeOsam() {
+        textView.setText("Inicijalizacija iteratora vrši se pomoću");
+
+        checkBox.setText("1. push back");
+        checkBox2.setText("2. push front");
+        checkBox3.setText("3. start");
+        checkBox4.setText("4. begin");
+        checkBox5.setText("5. end");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkBox4.isChecked() && checkBox5.isChecked()) {
+                    Toast.makeText(Questions.this, "Tačan odgovor", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Questions.this, "Netačan odgovor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
